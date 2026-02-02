@@ -15,6 +15,9 @@ function ServiceCards() {
             </div>
             <h3>Business Communication</h3>
             <p>Advanced messaging solutions including SMS, USSD, and API integrations for seamless customer engagement.</p>
+            <div className="competitive-advantage">
+              <strong>✓ Complete Integration Support</strong>
+            </div>
             <div className="service-features">
               <span className="feature-tag">Bulk SMS</span>
               <span className="feature-tag">USSD</span>
@@ -29,6 +32,9 @@ function ServiceCards() {
             </div>
             <h3>Authentication Solutions</h3>
             <p>Tamper-proof QR-based verification systems protecting documents and products with instant authentication.</p>
+            <div className="competitive-advantage">
+              <strong>✓ Enterprise-Grade Security</strong>
+            </div>
             <div className="service-features">
               <span className="feature-tag">QR Codes</span>
               <span className="feature-tag">Verification</span>
@@ -43,6 +49,9 @@ function ServiceCards() {
             </div>
             <h3>Business Advisory</h3>
             <p>Strategic consulting and development services to optimize operations and accelerate sustainable growth.</p>
+            <div className="competitive-advantage">
+              <strong>✓ Technology + Advisory Combined</strong>
+            </div>
             <div className="service-features">
               <span className="feature-tag">Strategy</span>
               <span className="feature-tag">Growth</span>

@@ -97,12 +97,6 @@ p {
   align-items: center;
 }
 
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-  }
-}
-
 .nav-link {
   text-decoration: none;
   color: #2c3e50;
@@ -144,6 +138,20 @@ p {
 
 .contact-link::after {
   display: none;
+}
+
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.mobile-menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: var(--primary-color);
+  margin: 3px 0;
+  transition: var(--transition);
 }
 
 /* Hero Styles */
@@ -273,6 +281,24 @@ p {
   opacity: 0.8;
 }
 
+.trust-badges {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.badge {
+  background: rgba(255,255,255,0.15);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
 /* Services Styles */
 .services-preview {
   padding: 80px 0;
@@ -353,6 +379,20 @@ p {
 .service-card p {
   margin-bottom: 1.5rem;
   line-height: 1.6;
+}
+
+.competitive-advantage {
+  background: linear-gradient(45deg, #27ae60, #2ecc71);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.competitive-advantage strong {
+  font-weight: 600;
 }
 
 .service-features {
@@ -477,6 +517,14 @@ p {
 @media (max-width: 768px) {
   .container {
     padding: 0 15px;
+  }
+  
+  .nav-links {
+    display: none;
+  }
+  
+  .mobile-menu-toggle {
+    display: flex;
   }
   
   .hero {

@@ -6,7 +6,7 @@ function Hero() {
       <div className="container">
         <div className="hero-content">
           <div className="hero-badge">
-            <span>🚀 Trusted by 500+ Businesses</span>
+            <span>🚀 Launching Soon</span>
           </div>
           <h1 className="hero-title">
             Zynco Systems Ltd
@@ -24,17 +24,23 @@ function Hero() {
           </div>
           <div className="hero-stats">
             <div className="stat">
-              <span className="stat-number">500+</span>
-              <span className="stat-label">Clients Served</span>
+              <span className="stat-number">3</span>
+              <span className="stat-label">Core Services</span>
             </div>
             <div className="stat">
-              <span className="stat-number">99.9%</span>
-              <span className="stat-label">Uptime</span>
+              <span className="stat-number">100%</span>
+              <span className="stat-label">Commitment</span>
             </div>
             <div className="stat">
               <span className="stat-number">24/7</span>
-              <span className="stat-label">Support</span>
+              <span className="stat-label">Support Ready</span>
             </div>
+          </div>
+          
+          <div className="trust-badges">
+            <div className="badge">🔒 Secure Systems</div>
+            <div className="badge">🛡️ Professional Grade</div>
+            <div className="badge">⚡ 24/7 Support</div>
           </div>
         </div>
       </div>
