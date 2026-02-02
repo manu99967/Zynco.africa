@@ -80,26 +80,33 @@ p {
 .logo {
   font-size: 1.8rem;
   font-weight: 700;
-  color: var(--primary-color);
+  color: #2c3e50;
   letter-spacing: -0.5px;
 }
 
 .brand-tagline {
   font-size: 0.75rem;
-  color: var(--text-light);
+  color: #2c3e50;
   font-weight: 500;
+  opacity: 0.8;
 }
 
 .nav-links {
-  display: flex;
+  display: flex !important;
   gap: 2rem;
   align-items: center;
 }
 
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+}
+
 .nav-link {
   text-decoration: none;
-  color: var(--text-dark);
-  font-weight: 500;
+  color: #2c3e50;
+  font-weight: 600;
   transition: var(--transition);
   position: relative;
 }
@@ -141,7 +148,7 @@ p {
 
 /* Hero Styles */
 .hero {
-  background: var(--gradient);
+  background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
   color: var(--white);
   padding: 120px 0 80px;
   margin-top: 80px;
@@ -190,15 +197,17 @@ p {
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
-  opacity: 0.9;
+  opacity: 1;
+  color: #ffffff;
 }
 
 .hero-description {
   font-size: 1.1rem;
   max-width: 600px;
   margin: 0 auto 3rem;
-  opacity: 0.8;
+  opacity: 1;
   line-height: 1.7;
+  color: #ffffff;
 }
 
 .hero-actions {
@@ -468,10 +477,6 @@ p {
 @media (max-width: 768px) {
   .container {
     padding: 0 15px;
-  }
-  
-  .nav-links {
-    display: none;
   }
   
   .hero {

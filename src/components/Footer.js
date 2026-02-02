@@ -45,9 +45,9 @@ function Footer() {
               <p>📞 +254 700 000 000</p>
             </div>
             <div className="social-links">
-              <a href="#" aria-label="LinkedIn">💼</a>
-              <a href="#" aria-label="Twitter">🐦</a>
-              <a href="#" aria-label="Facebook">📘</a>
+              <a href="https://linkedin.com/company/zynco-systems" aria-label="LinkedIn">💼</a>
+              <a href="https://twitter.com/zyncosystems" aria-label="Twitter">🐦</a>
+              <a href="https://facebook.com/zyncosystems" aria-label="Facebook">📘</a>
             </div>
           </div>
         </div>
