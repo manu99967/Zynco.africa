@@ -118,11 +118,12 @@ p {
   transition: var(--transition);
   position: relative;
   padding: 0.5rem 0;
+  opacity: 1;
+  visibility: visible;
 }
 
 .nav-link:hover {
   color: var(--secondary-color);
-  transform: translateY(-1px);
 }
 
 .nav-link::after {
@@ -409,7 +410,6 @@ p {
   transition: var(--transition);
   position: relative;
   overflow: hidden;
-  animation: fadeInUp 1s ease-out;
 }
 
 .service-card::before {
@@ -699,7 +699,6 @@ p {
   box-shadow: var(--shadow);
   text-align: center;
   transition: var(--transition);
-  animation: fadeInUp 1s ease-out;
 }
 
 .mv-card:hover {
