@@ -39,7 +39,7 @@ export const Header = memo(function Header() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <a href="#" className="flex-shrink-0 flex items-center gap-4" aria-label="ZYNCO Home">
-            <img src="/src/assets/images/zynco-logo.png" alt="ZYNCO Logo" width="60" height="60" className="object-contain" />
+            <img src="/images/zynco-logo.png" alt="ZYNCO Logo" width="60" height="60" className="object-contain" />
             <div className="flex flex-col gap-1">
               <div className="text-base font-bold text-gray-900 leading-tight">{SITE_CONFIG.name}</div>
               <div className="text-xs text-gray-600">{SITE_CONFIG.tagline}</div>

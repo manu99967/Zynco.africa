@@ -21,7 +21,7 @@ export function Services() {
         'Higher conversion rates'
       ],
       idealFor: 'Banks, MFIs, SACCOs, schools, hospitals, retailers, NGOs, and corporates',
-      imageUrl: '/src/assets/images/service-communication.png'
+      imageUrl: '/images/service-communication.png'
     },
     {
       icon: Shield,
@@ -41,7 +41,7 @@ export function Services() {
         'Reduces verification costs'
       ],
       idealFor: 'Educational institutions, government agencies, banks, and enterprises',
-      imageUrl: '/src/assets/images/service-authentication.png'
+      imageUrl: '/images/service-authentication.png'
     },
     {
       icon: TrendingUp,
@@ -61,7 +61,7 @@ export function Services() {
         'Improved operational efficiency'
       ],
       idealFor: 'SMEs, startups, retail, education, agribusiness, and professional services',
-      imageUrl: '/src/assets/images/service-advisory.png'
+      imageUrl: '/images/service-advisory.png'
     }
   ];
 

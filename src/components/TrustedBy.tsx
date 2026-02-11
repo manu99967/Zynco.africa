@@ -13,12 +13,12 @@ export function TrustedBy() {
         
         <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
           <img 
-            src="/src/assets/images/partner.png" 
+            src="/images/partner.png" 
             alt="Partner" 
             className="h-16 md:h-20 object-contain grayscale hover:grayscale-0 transition-all"
           />
           <img 
-            src="/src/assets/images/partner2.png" 
+            src="/images/partner2.png" 
             alt="Partner" 
             className="h-16 md:h-20 object-contain grayscale hover:grayscale-0 transition-all"
           />

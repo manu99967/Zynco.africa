@@ -48,7 +48,7 @@ export const Hero = memo(function Hero() {
           <div className="relative">
             <div className="rounded-2xl overflow-hidden shadow-2xl">
               <OptimizedImage
-                src="/src/assets/images/hero-background.png"
+                src="/images/hero-background.png"
                 alt="Modern business technology workspace"
                 className="w-full h-auto"
               />
