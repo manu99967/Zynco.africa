@@ -36,13 +36,13 @@ export const Header = memo(function Header() {
       isScrolled ? 'bg-white/95 backdrop-blur-sm shadow-md' : 'bg-white/95 backdrop-blur-sm'
     } border-b border-gray-200`} role="banner">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-16 w-full">
           {/* Logo */}
-          <a href="#" className="flex-shrink-0 flex items-center gap-4" aria-label="ZYNCO Home">
-            <img src="/images/zynco-logo.png" alt="ZYNCO Logo" width="60" height="60" className="object-contain" />
+          <a href="#" className="flex-shrink-0 flex items-center gap-2" aria-label="ZYNCO Home">
+            <img src="/images/zynco-logo.png" alt="ZYNCO Logo" width="50" height="50" className="object-contain" />
             <div className="flex flex-col gap-1">
-              <div className="text-base font-bold text-gray-900 leading-tight">{SITE_CONFIG.name}</div>
-              <div className="text-xs text-gray-600">{SITE_CONFIG.tagline}</div>
+              <div className="text-sm font-bold text-gray-900 leading-tight">{SITE_CONFIG.name}</div>
+              <div className="text-xs text-gray-600 hidden sm:block">{SITE_CONFIG.tagline}</div>
             </div>
           </a>
 
