@@ -183,3 +183,12 @@
 html {
   font-size: var(--font-size);
 }
+
+/* Force mobile menu button to stay visible */
+@media (max-width: 767px) {
+  header button[aria-controls="mobile-menu"] {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+}
