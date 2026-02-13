@@ -71,29 +71,26 @@ export const Header = memo(function Header() {
           </div>
 
           {/* Mobile menu button */}
-          <div className="block md:hidden ml-auto">
-            <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-600"
-              aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
-              aria-expanded={mobileMenuOpen}
-              aria-controls="mobile-menu"
-            >
-              <span className="text-2xl leading-none">{mobileMenuOpen ? '✕' : '☰'}</span>
-            </button>
-          </div>
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="md:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-600"
+            aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={mobileMenuOpen}
+            aria-controls="mobile-menu"
+          >
+            <span className="text-2xl leading-none">{mobileMenuOpen ? '✕' : '☰'}</span>
+          </button>
         </div>
       </div>
 
       {/* Mobile Navigation */}
-      <div 
-        id="mobile-menu" 
-        className={`md:hidden bg-white border-t border-gray-200 transition-all duration-300 ease-in-out overflow-hidden ${
-          mobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-        }`}
-        role="navigation" 
-        aria-label="Mobile navigation"
-      >
+      {mobileMenuOpen && (
+        <div 
+          id="mobile-menu" 
+          className="md:hidden bg-white border-t border-gray-200"
+          role="navigation" 
+          aria-label="Mobile navigation"
+        >
           <div className="px-4 pt-2 pb-4 space-y-2">
             {NAV_ITEMS.map((item) => (
               <button
@@ -112,7 +109,8 @@ export const Header = memo(function Header() {
               Get Started
             </button>
         </div>
-      </div>
+        </div>
+      )}
     </header>
   );
 });
