@@ -1,13 +1,14 @@
 export const SITE_CONFIG = {
   name: 'ZYNCO',
-  tagline: 'Smart Solutions',
+  tagline: 'Business Solutions That Work',
   description: 'We partner with enterprises, institutions, and growing businesses to solve real operational challenges using secure technology, reliable systems, and practical business advisory support.',
 } as const;
 
 export const NAV_ITEMS = [
-  { id: 'about', label: 'About' },
+  { id: 'about', label: 'About Us' },
+  { id: 'why-zynco', label: 'Why ZYNCO' },
   { id: 'services', label: 'Services' },
-  { id: 'contact', label: 'Contact' },
+  { id: 'contact', label: 'Contact Us' },
 ] as const;
 
 export const HERO_CONTENT = {
