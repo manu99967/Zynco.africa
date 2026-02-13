@@ -1,9 +1,7 @@
-import { Menu, X } from 'lucide-react';
 import { useState, useEffect, useCallback, memo } from 'react';
-import { SITE_CONFIG, NAV_ITEMS } from '../config/content';
+import { SITE_CONFIG } from '../config/content';
 
 export const Header = memo(function Header() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -14,20 +12,10 @@ export const Header = memo(function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  useEffect(() => {
-    if (mobileMenuOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
-    return () => { document.body.style.overflow = ''; };
-  }, [mobileMenuOpen]);
-
   const scrollToSection = useCallback((id: string) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
-      setMobileMenuOpen(false);
     }
   }, []);
 
@@ -38,27 +26,13 @@ export const Header = memo(function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 w-full">
           {/* Logo */}
-          <a href="#" className="flex-shrink-0 flex items-center gap-2" aria-label="ZYNCO Home">
+          <a href="#" className="flex-shrink-0 flex items-center gap-6" aria-label="ZYNCO Home">
             <img src="/images/zynco-logo.png" alt="ZYNCO Logo" width="50" height="50" className="object-contain" />
-            <div className="flex flex-col gap-1">
-              <div className="text-sm font-bold text-gray-900 leading-tight">{SITE_CONFIG.name}</div>
-              <div className="text-xs text-gray-600 hidden sm:block">{SITE_CONFIG.tagline}</div>
+            <div className="flex flex-col gap-0.5">
+              <div className="text-lg font-bold text-gray-900 leading-tight tracking-wide">{SITE_CONFIG.name}</div>
+              <div className="text-xs text-gray-600 hidden sm:block tracking-wide">{SITE_CONFIG.tagline}</div>
             </div>
           </a>
-
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8" role="navigation" aria-label="Main navigation">
-            {NAV_ITEMS.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className="text-gray-700 hover:text-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 rounded"
-                aria-label={`Navigate to ${item.label}`}
-              >
-                {item.label}
-              </button>
-            ))}
-          </nav>
 
           {/* CTA Button */}
           <div className="hidden md:block">
@@ -70,47 +44,18 @@ export const Header = memo(function Header() {
             </button>
           </div>
 
-          {/* Mobile menu button */}
-          <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-600"
-            aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
-            aria-expanded={mobileMenuOpen}
-            aria-controls="mobile-menu"
-          >
-            <span className="text-2xl leading-none">{mobileMenuOpen ? '✕' : '☰'}</span>
-          </button>
-        </div>
-      </div>
-
-      {/* Mobile Navigation */}
-      {mobileMenuOpen && (
-        <div 
-          id="mobile-menu" 
-          className="md:hidden bg-white border-t border-gray-200"
-          role="navigation" 
-          aria-label="Mobile navigation"
-        >
-          <div className="px-4 pt-2 pb-4 space-y-2">
-            {NAV_ITEMS.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className="block w-full text-left px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
-                aria-label={`Navigate to ${item.label}`}
-              >
-                {item.label}
-              </button>
-            ))}
-            <button
+          {/* Mobile CTA */}
+          <div className="md:hidden">
+            <button 
               onClick={() => scrollToSection('contact')}
-              className="block w-full bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors mt-4"
+              className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm"
             >
               Get Started
             </button>
+          </div>
         </div>
-        </div>
-      )}
+      </div>
+
     </header>
   );
 });

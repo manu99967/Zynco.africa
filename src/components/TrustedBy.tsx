@@ -1,6 +1,6 @@
 export function TrustedBy() {
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 lg:py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
@@ -11,7 +11,7 @@ export function TrustedBy() {
           </p>
         </div>
         
-        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+        <div className="flex flex-wrap justify-center items-center gap-4 md:gap-12">
           <img 
             src="/images/partner.png" 
             alt="Partner" 

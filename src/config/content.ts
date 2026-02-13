@@ -7,7 +7,6 @@ export const SITE_CONFIG = {
 export const NAV_ITEMS = [
   { id: 'about', label: 'About' },
   { id: 'services', label: 'Services' },
-  { id: 'why-zynco', label: 'Why ZYNCO' },
   { id: 'contact', label: 'Contact' },
 ] as const;
 

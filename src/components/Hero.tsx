@@ -11,7 +11,7 @@ export const Hero = memo(function Hero() {
   }, []);
 
   return (
-    <section className="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden" aria-label="Hero section">
+    <section className="relative pt-24 pb-16 md:pt-32 md:pb-24 lg:pt-40 lg:pb-32 overflow-hidden" aria-label="Hero section">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-blue-50" aria-hidden="true"></div>
       
