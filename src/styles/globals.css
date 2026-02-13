@@ -191,4 +191,12 @@ html {
     visibility: visible !important;
     opacity: 1 !important;
   }
+  
+  /* Fix button text overflow on mobile */
+  button {
+    overflow: visible !important;
+    text-overflow: clip !important;
+    white-space: normal !important;
+    word-wrap: break-word !important;
+  }
 }

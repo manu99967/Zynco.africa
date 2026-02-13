@@ -48,7 +48,7 @@ export const Header = memo(function Header() {
           <div className="md:hidden">
             <button 
               onClick={() => scrollToSection('contact')}
-              className="bg-blue-600 text-white px-2 py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm"
+              className="bg-blue-600 text-white px-3 py-2 rounded-lg hover:bg-blue-700 transition-colors text-xs whitespace-nowrap"
             >
               Get Started
             </button>
