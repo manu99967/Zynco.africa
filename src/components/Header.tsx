@@ -25,58 +25,58 @@ export const Header = memo(function Header() {
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-white/95 backdrop-blur-sm shadow-md' : 'bg-white/95 backdrop-blur-sm'
     } border-b border-gray-200`} role="banner">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16 w-full">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-14 sm:h-16 w-full">
           {/* Logo */}
-          <a href="#" className="flex-shrink-0 flex items-center gap-6" aria-label="ZYNCO Home">
-            <img src="/images/zynco-logo.png" alt="ZYNCO Logo" width="50" height="50" className="object-contain" />
+          <a href="#" className="flex-shrink-0 flex items-center gap-2 sm:gap-6" aria-label="ZYNCO Home">
+            <img src="/images/zynco-logo.png" alt="ZYNCO Logo" width="40" height="40" className="object-contain" />
             <div className="flex flex-col gap-0.5">
-              <div className="text-lg font-bold text-gray-900 leading-tight tracking-wide">{SITE_CONFIG.name}</div>
+              <div className="text-base sm:text-lg font-bold text-gray-900 leading-tight tracking-wide">{SITE_CONFIG.name}</div>
               <div className="text-xs text-gray-600 hidden sm:block tracking-wide">{SITE_CONFIG.tagline}</div>
             </div>
           </a>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
             <button 
               onClick={() => scrollToSection('about')}
-              className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+              className="text-gray-700 hover:text-blue-600 font-medium transition-colors text-sm xl:text-base"
             >
               About Us
             </button>
             <button 
               onClick={() => scrollToSection('why-zynco')}
-              className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+              className="text-gray-700 hover:text-blue-600 font-medium transition-colors text-sm xl:text-base"
             >
               Why ZYNCO
             </button>
             <button 
               onClick={() => scrollToSection('services')}
-              className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+              className="text-gray-700 hover:text-blue-600 font-medium transition-colors text-sm xl:text-base"
             >
               Services
             </button>
             <button 
               onClick={() => scrollToSection('contact')}
-              className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+              className="text-gray-700 hover:text-blue-600 font-medium transition-colors text-sm xl:text-base"
             >
               Contact Us
             </button>
           </nav>
 
           {/* CTA Button */}
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <button 
               onClick={() => scrollToSection('contact')}
-              className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium"
+              className="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium text-sm xl:text-base whitespace-nowrap"
             >
               Get Started
             </button>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Button - Always visible on mobile */}
           <button 
-            className="md:hidden p-2"
+            className="flex items-center justify-center p-2 text-gray-700 hover:text-blue-600 transition-colors ml-2"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -92,35 +92,35 @@ export const Header = memo(function Header() {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-gray-100">
-            <nav className="flex flex-col gap-4">
+          <div className="lg:hidden py-4 border-t border-gray-100">
+            <nav className="flex flex-col gap-3">
               <button 
                 onClick={() => scrollToSection('about')}
-                className="text-left text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                className="text-left text-gray-700 hover:text-blue-600 font-medium transition-colors py-2"
               >
                 About Us
               </button>
               <button 
                 onClick={() => scrollToSection('why-zynco')}
-                className="text-left text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                className="text-left text-gray-700 hover:text-blue-600 font-medium transition-colors py-2"
               >
                 Why ZYNCO
               </button>
               <button 
                 onClick={() => scrollToSection('services')}
-                className="text-left text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                className="text-left text-gray-700 hover:text-blue-600 font-medium transition-colors py-2"
               >
                 Services
               </button>
               <button 
                 onClick={() => scrollToSection('contact')}
-                className="text-left text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                className="text-left text-gray-700 hover:text-blue-600 font-medium transition-colors py-2"
               >
                 Contact Us
               </button>
               <button 
                 onClick={() => scrollToSection('contact')}
-                className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium w-full text-center"
+                className="bg-blue-600 text-white px-5 py-2.5 rounded-lg hover:bg-blue-700 transition-colors font-medium w-full text-center mt-2"
               >
                 Get Started
               </button>
