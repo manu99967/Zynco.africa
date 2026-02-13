@@ -29,14 +29,14 @@ export const Hero = memo(function Hero() {
             <div className="flex flex-col sm:flex-row gap-4">
               <button 
                 onClick={() => scrollToSection('services')}
-                className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors text-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+                className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors text-base sm:text-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 whitespace-nowrap"
                 aria-label="Explore our solutions"
               >
                 {HERO_CONTENT.cta.primary}
               </button>
               <button 
                 onClick={() => scrollToSection('contact')}
-                className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors text-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+                className="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50 transition-colors text-base sm:text-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 whitespace-nowrap"
                 aria-label="Contact us"
               >
                 {HERO_CONTENT.cta.secondary}
