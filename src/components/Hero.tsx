@@ -18,7 +18,7 @@ export const Hero = memo(function Hero() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left content */}
-          <div>
+          <div className="w-full">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
               {HERO_CONTENT.title}{' '}
               <span className="text-blue-600">{HERO_CONTENT.titleHighlight}</span>
@@ -26,17 +26,17 @@ export const Hero = memo(function Hero() {
             <p className="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed">
               {HERO_CONTENT.description}
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 w-full">
               <button 
                 onClick={() => scrollToSection('services')}
-                className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors text-base sm:text-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 whitespace-nowrap"
+                className="bg-blue-600 text-white px-4 py-3 rounded-lg hover:bg-blue-700 transition-colors text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 w-full sm:w-auto"
                 aria-label="Explore our solutions"
               >
                 {HERO_CONTENT.cta.primary}
               </button>
               <button 
                 onClick={() => scrollToSection('contact')}
-                className="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50 transition-colors text-base sm:text-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 whitespace-nowrap"
+                className="border-2 border-blue-600 text-blue-600 px-4 py-3 rounded-lg hover:bg-blue-50 transition-colors text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 w-full sm:w-auto"
                 aria-label="Contact us"
               >
                 {HERO_CONTENT.cta.secondary}
