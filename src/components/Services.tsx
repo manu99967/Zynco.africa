@@ -5,22 +5,22 @@ export function Services() {
   const services = [
     {
       icon: MessageSquare,
-      title: 'Business Communication & Messaging Solutions',
-      description: 'Enterprise-grade messaging solutions built on reliable infrastructure for security, performance, and seamless system integration.',
+      title: 'Bulk SMS & Business Messaging Solutions',
+      description: 'Kenya\'s reliable enterprise SMS platform. Reach thousands of customers instantly with promotional messages, transactional alerts, OTP verification, and automated notifications via simple API integration.',
       features: [
         'Bulk SMS (Promotional & Transactional)',
         'Branded Sender IDs & Short Codes',
         'USSD Applications & Two-Way SMS',
         'OTP & Verification Messaging',
-        'API Integration for Business Systems'
+        'SMS API Integration for Business Systems'
       ],
       benefits: [
-        'Faster customer engagement',
-        'Reduced communication costs',
-        'Improved customer experience',
-        'Higher conversion rates'
+        'Instant customer reach',
+        '95%+ delivery rate',
+        'Real-time delivery reports',
+        'Pay only for delivered messages'
       ],
-      idealFor: 'Banks, MFIs, SACCOs, schools, hospitals, retailers, NGOs, and corporates',
+      idealFor: 'Banks, MFIs, SACCOs, schools, hospitals, retailers, NGOs, and corporates in Kenya',
       imageUrl: '/images/service-communication.png'
     },
     {
@@ -66,14 +66,15 @@ export function Services() {
   ];
 
   return (
-    <section id="services" className="py-20 lg:py-32 bg-white">
+    <section id="services" className="py-20 lg:py-32 bg-gradient-to-b from-white to-silver-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            What We Do
+          <span className="text-gold-500 font-semibold text-sm uppercase tracking-wide">Our Services</span>
+          <h2 className="text-3xl md:text-4xl font-bold text-dark-800 mt-2 mb-4">
+            Bulk SMS & Business Solutions in Kenya
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            End-to-end solutions designed for real-world impact, from communication and security to business growth
+          <p className="text-xl text-dark-500 max-w-3xl mx-auto">
+            Enterprise-grade communication, document security, and business advisory services designed for Kenyan businesses
           </p>
         </div>
 

@@ -168,7 +168,7 @@ export function Contact() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full bg-gold-500 text-dark-900 px-8 py-3 rounded-lg hover:bg-gold-400 transition-colors font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? 'Sending...' : 'Send Message'}
                 </button>
@@ -185,37 +185,37 @@ export function Contact() {
 
           {/* Contact Information */}
           <div>
-            <div className="bg-gradient-to-br from-blue-600 to-blue-800 rounded-2xl p-8 text-white h-full">
-              <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
+            <div className="bg-gradient-to-br from-dark-700 to-dark-900 rounded-2xl p-8 text-white h-full border border-silver-600">
+              <h3 className="text-2xl font-bold mb-6 text-gold-400">Contact Information</h3>
               
               <div className="space-y-6 mb-8">
                 <div className="flex items-start">
-                  <div className="p-3 bg-white/20 rounded-lg mr-4">
-                    <Mail className="w-6 h-6" />
+                  <div className="p-3 bg-gold-500/20 rounded-lg mr-4">
+                    <Mail className="w-6 h-6 text-gold-400" />
                   </div>
                   <div>
                     <p className="font-medium mb-1">Email</p>
-                    <a href="mailto:info@zynco.africa" className="text-blue-100 hover:text-white transition-colors">
+                    <a href="mailto:info@zynco.africa" className="text-silver-300 hover:text-gold-400 transition-colors">
                       info@zynco.africa
                     </a>
                   </div>
                 </div>
 
                 <div className="flex items-start">
-                  <div className="p-3 bg-white/20 rounded-lg mr-4">
-                    <Phone className="w-6 h-6" />
+                  <div className="p-3 bg-gold-500/20 rounded-lg mr-4">
+                    <Phone className="w-6 h-6 text-gold-400" />
                   </div>
                   <div>
                     <p className="font-medium mb-1">Phone</p>
-                    <a href="tel:+254796387176" className="text-blue-100 hover:text-white transition-colors">
+                    <a href="tel:+254796387176" className="text-silver-300 hover:text-gold-400 transition-colors">
                       +254 796 387 176
                     </a>
                   </div>
                 </div>
 
                 <div className="flex items-start">
-                  <div className="p-3 bg-white/20 rounded-lg mr-4">
-                    <MapPin className="w-6 h-6" />
+                  <div className="p-3 bg-gold-500/20 rounded-lg mr-4">
+                    <MapPin className="w-6 h-6 text-gold-400" />
                   </div>
                   <div>
                     <p className="font-medium mb-1">Location</p>
@@ -223,11 +223,11 @@ export function Contact() {
                       href="https://www.google.com/maps/search/?api=1&query=GTC+Westlands+Nairobi+Kenya" 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="text-blue-100 hover:text-white transition-colors"
+                      className="text-silver-300 hover:text-gold-400 transition-colors"
                     >
                       GTC, Westlands – Nairobi, Kenya
                     </a>
-                    <p className="text-blue-100 text-sm mt-1">P.O. Box 17894-00100, Nairobi</p>
+                    <p className="text-silver-400 text-sm mt-1">P.O. Box 17894-00100, Nairobi</p>
                   </div>
                 </div>
               </div>

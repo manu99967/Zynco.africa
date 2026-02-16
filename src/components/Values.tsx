@@ -19,14 +19,15 @@ export function Values() {
   ];
 
   return (
-    <section className="py-20 lg:py-32 bg-white">
+    <section className="py-20 lg:py-32 bg-silver-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Our Values
+          <span className="text-gold-500 font-semibold text-sm uppercase tracking-wide">Our Values</span>
+          <h2 className="text-3xl md:text-4xl font-bold text-dark-800 mt-2 mb-4">
+            The Principles That Guide Us
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            The principles that guide everything we do
+          <p className="text-xl text-dark-500 max-w-3xl mx-auto">
+            Everything we do is built on these core values
           </p>
         </div>
 
@@ -34,15 +35,15 @@ export function Values() {
           {values.map((value, index) => (
             <div 
               key={index} 
-              className="text-center p-6"
+              className="text-center p-6 group"
             >
-              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              <div className="w-20 h-20 bg-dark-800 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:bg-gold-500 transition-colors">
+                <svg className="w-10 h-10 text-gold-400 group-hover:text-dark-800 transition-colors" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12"></polyline>
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">{value.title}</h3>
-              <p className="text-gray-600">{value.description}</p>
+              <h3 className="text-xl font-semibold text-dark-800 mb-2">{value.title}</h3>
+              <p className="text-dark-500">{value.description}</p>
             </div>
           ))}
         </div>
