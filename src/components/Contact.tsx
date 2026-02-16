@@ -219,7 +219,14 @@ export function Contact() {
                   </div>
                   <div>
                     <p className="font-medium mb-1">Location</p>
-                    <p className="text-blue-100">GTC, Westlands – Nairobi, Kenya</p>
+                    <a 
+                      href="https://www.google.com/maps/search/?api=1&query=GTC+Westlands+Nairobi+Kenya" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-blue-100 hover:text-white transition-colors"
+                    >
+                      GTC, Westlands – Nairobi, Kenya
+                    </a>
                     <p className="text-blue-100 text-sm mt-1">P.O. Box 17894-00100, Nairobi</p>
                   </div>
                 </div>
