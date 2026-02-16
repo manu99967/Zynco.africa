@@ -1,6 +1,5 @@
+import Image from 'next/image';
 import { LucideIcon } from 'lucide-react';
-import { Check } from 'lucide-react';
-import { OptimizedImage } from './OptimizedImage';
 
 interface ServiceCardProps {
   icon: LucideIcon;
@@ -13,70 +12,76 @@ interface ServiceCardProps {
   reverse?: boolean;
 }
 
-export function ServiceCard({
-  icon: Icon,
-  title,
-  description,
-  features,
-  benefits,
-  idealFor,
-  imageUrl,
-  reverse = false
+export function ServiceCard({ 
+  icon: Icon, 
+  title, 
+  description, 
+  features, 
+  benefits, 
+  idealFor, 
+  imageUrl, 
+  reverse = false 
 }: ServiceCardProps) {
   return (
-    <div className={`grid md:grid-cols-2 gap-8 items-center ${reverse ? 'md:grid-flow-dense' : ''}`}>
+    <div className={`grid md:grid-cols-2 gap-8 lg:gap-12 items-center ${reverse ? 'md:flex-row-reverse' : ''}`}>
       {/* Image */}
-      <div className={reverse ? 'md:col-start-2' : ''}>
-        <div className="rounded-xl overflow-hidden shadow-lg bg-gray-50">
-          <OptimizedImage
+      <div className={`relative ${reverse ? 'md:order-2' : ''}`}>
+        <div className="rounded-2xl overflow-hidden shadow-xl">
+          <Image
             src={imageUrl}
             alt={title}
-            className="w-full h-80 object-contain"
+            width={600}
+            height={400}
+            className="w-full h-auto"
           />
         </div>
       </div>
 
       {/* Content */}
-      <div className={reverse ? 'md:col-start-1 md:row-start-1' : ''}>
-        <div className="flex items-center mb-4">
-          <div className="p-3 bg-blue-100 rounded-lg mr-4">
-            <Icon className="w-8 h-8 text-blue-600" />
+      <div className={reverse ? 'md:order-1' : ''}>
+        <div className="flex items-center gap-3 mb-4">
+          <div className="p-2 bg-blue-100 rounded-lg">
+            <Icon className="w-6 h-6 text-blue-600" />
           </div>
-          <h3 className="text-2xl font-bold text-gray-900">{title}</h3>
+          <h3 className="text-xl md:text-2xl font-bold text-gray-900">{title}</h3>
         </div>
-
-        <p className="text-gray-600 mb-6 leading-relaxed">
-          {description}
-        </p>
-
-        <div className="mb-6">
-          <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
-          <ul className="space-y-2">
-            {features.map((feature, idx) => (
-              <li key={idx} className="flex items-start">
-                <Check className="w-5 h-5 text-blue-600 mr-2 flex-shrink-0 mt-0.5" />
-                <span className="text-gray-700">{feature}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div className="mb-6">
-          <h4 className="font-semibold text-gray-900 mb-3">Business Impact:</h4>
-          <ul className="space-y-2">
-            {benefits.map((benefit, idx) => (
-              <li key={idx} className="flex items-start">
-                <Check className="w-5 h-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
-                <span className="text-gray-700">{benefit}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div className="bg-blue-50 p-4 rounded-lg">
-          <p className="text-sm text-gray-700">
-            <span className="font-semibold">Ideal for:</span> {idealFor}
-          </p>
+        
+        <p className="text-gray-600 mb-6 leading-relaxed">{description}</p>
+        
+        <div className="space-y-4">
+          <div>
+            <h4 className="font-semibold text-gray-900 mb-2">Key Features</h4>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+              {features.map((feature, index) => (
+                <li key={index} className="flex items-start gap-2 text-sm text-gray-600">
+                  <svg className="w-4 h-4 text-blue-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  {feature}
+                </li>
+              ))}
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="font-semibold text-gray-900 mb-2">Benefits</h4>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+              {benefits.map((benefit, index) => (
+                <li key={index} className="flex items-start gap-2 text-sm text-gray-600">
+                  <svg className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  {benefit}
+                </li>
+              ))}
+            </ul>
+          </div>
+          
+          <div className="pt-4 border-t border-gray-100">
+            <p className="text-sm text-gray-500">
+              <span className="font-medium">Ideal for:</span> {idealFor}
+            </p>
+          </div>
         </div>
       </div>
     </div>

@@ -1,37 +1,51 @@
-import { Building2, GraduationCap, ShoppingBag, Sprout, Users, Landmark } from 'lucide-react';
-
 export function WhoWeServe() {
   const sectors = [
-    { icon: Building2, name: 'Corporates & Enterprises' },
-    { icon: Landmark, name: 'Banks, MFIs & SACCOs' },
-    { icon: GraduationCap, name: 'Educational Institutions' },
-    { icon: ShoppingBag, name: 'Retailers & Distributors' },
-    { icon: Sprout, name: 'Agribusinesses & Cooperatives' },
-    { icon: Users, name: 'NGOs & Government' }
+    {
+      title: 'Financial Services',
+      description: 'Banks, MFIs, SACCOs, and insurance companies.',
+    },
+    {
+      title: 'Education',
+      description: 'Schools, colleges, universities, and training institutions.',
+    },
+    {
+      title: 'Healthcare',
+      description: 'Hospitals, clinics, and healthcare organizations.',
+    },
+    {
+      title: 'Retail & Commerce',
+      description: 'Retailers, e-commerce, and trading companies.',
+    },
+    {
+      title: 'Government & NGOs',
+      description: 'Government agencies and non-profit organizations.',
+    },
+    {
+      title: 'Professional Services',
+      description: 'Law firms, consultancies, and service providers.',
+    },
   ];
 
   return (
-    <section className="py-20 lg:py-32 bg-white">
+    <section className="py-20 lg:py-32 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Who We Serve
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Trusted by organizations across multiple sectors
+            We work with organizations across various sectors
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {sectors.map((sector, index) => (
             <div 
-              key={index}
-              className="flex flex-col items-center p-6 bg-gray-50 rounded-xl hover:bg-blue-50 hover:shadow-md transition-all group"
+              key={index} 
+              className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow"
             >
-              <div className="p-4 bg-white rounded-full shadow-sm group-hover:bg-blue-100 transition-colors mb-4">
-                <sector.icon className="w-8 h-8 text-blue-600" />
-              </div>
-              <p className="text-sm text-center text-gray-700 font-medium">{sector.name}</p>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">{sector.title}</h3>
+              <p className="text-gray-600">{sector.description}</p>
             </div>
           ))}
         </div>

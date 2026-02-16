@@ -1,8 +1,10 @@
-import { memo, useCallback } from 'react';
-import { OptimizedImage } from './OptimizedImage';
+'use client';
+
+import { useCallback } from 'react';
+import Image from 'next/image';
 import { HERO_CONTENT } from '../config/content';
 
-export const Hero = memo(function Hero() {
+export function Hero() {
   const scrollToSection = useCallback((id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -47,9 +49,11 @@ export const Hero = memo(function Hero() {
           {/* Right image */}
           <div className="relative">
             <div className="rounded-2xl overflow-hidden shadow-2xl">
-              <OptimizedImage
+              <Image
                 src="/images/hero-background.png"
                 alt="Modern business technology workspace"
+                width={800}
+                height={600}
                 className="w-full h-auto"
               />
             </div>
@@ -61,4 +65,4 @@ export const Hero = memo(function Hero() {
       </div>
     </section>
   );
-});
+}

@@ -1,57 +1,46 @@
-import { Target, Lightbulb, Shield as ShieldIcon, Users, Award } from 'lucide-react';
-
 export function WhyZynco() {
   const reasons = [
     {
-      icon: Target,
-      title: 'Solutions-First Approach',
-      description: 'We focus on outcomes, not tools. Every solution is designed to deliver measurable impact and operational efficiency.'
+      title: 'Local Expertise',
+      description: 'Deep understanding of East African markets and business dynamics.',
     },
     {
-      icon: ShieldIcon,
-      title: 'Secure & Reliable Systems',
-      description: 'Built for real-world business use with enterprise-grade security and reliability you can depend on.'
+      title: 'Technology + Advisory',
+      description: 'Unique combination of technical solutions and business guidance.',
     },
     {
-      icon: Lightbulb,
-      title: 'Technology & Advisory Combined',
-      description: 'Get technology and business advisory under one roof, ensuring strategy aligns with implementation.'
+      title: 'Proven Track Record',
+      description: 'Successfully served organizations across various sectors.',
     },
     {
-      icon: Users,
-      title: 'Scalable for All Organizations',
-      description: 'From SMEs to large institutions, our solutions scale with your growth and evolving needs.'
+      title: 'Reliable Support',
+      description: 'Dedicated support team ensuring smooth operations.',
     },
-    {
-      icon: Award,
-      title: 'Professional Support',
-      description: 'Responsive, reliable support you can count on. We partner with you for long-term success.'
-    }
   ];
 
   return (
-    <section id="why-zynco" className="py-20 lg:py-32 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
+    <section id="why-zynco" className="py-20 lg:py-32 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Why Choose ZYNCO
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Why Choose ZYNCO?
           </h2>
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-            We deliver solutions that work in the real world, backed by expertise and reliability
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            We combine technology expertise with practical business understanding
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {reasons.map((reason, index) => (
             <div 
-              key={index}
-              className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/15 transition-all"
+              key={index} 
+              className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow"
             >
-              <div className="p-3 bg-white/20 rounded-lg w-fit mb-4">
-                <reason.icon className="w-8 h-8 text-white" />
+              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                <span className="text-2xl font-bold text-blue-600">{index + 1}</span>
               </div>
-              <h3 className="text-xl font-semibold mb-3">{reason.title}</h3>
-              <p className="text-blue-100 leading-relaxed">{reason.description}</p>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">{reason.title}</h3>
+              <p className="text-gray-600">{reason.description}</p>
             </div>
           ))}
         </div>

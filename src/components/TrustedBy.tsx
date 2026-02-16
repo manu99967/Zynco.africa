@@ -1,26 +1,26 @@
+import Image from 'next/image';
+
 export function TrustedBy() {
   return (
-    <section className="py-16 lg:py-24 bg-gray-50">
+    <section className="py-12 bg-white border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
-            Trusted By
-          </h2>
-          <p className="text-gray-600">
-            Organizations that trust ZYNCO for their business solutions
-          </p>
-        </div>
-        
-        <div className="flex flex-wrap justify-center items-center gap-4 md:gap-12">
-          <img 
-            src="/images/partner.png" 
-            alt="Partner" 
-            className="h-16 md:h-20 object-contain grayscale hover:grayscale-0 transition-all"
+        <p className="text-center text-gray-500 text-sm font-medium tracking-wider uppercase mb-8">
+          Trusted By
+        </p>
+        <div className="flex flex-wrap justify-center items-center gap-12 md:gap-16">
+          <Image
+            src="/images/partner.png"
+            alt="Partner logo"
+            width={150}
+            height={50}
+            className="h-10 w-auto object-contain"
           />
-          <img 
-            src="/images/partner2.png" 
-            alt="Partner" 
-            className="h-16 md:h-20 object-contain grayscale hover:grayscale-0 transition-all"
+          <Image
+            src="/images/partner2.png"
+            alt="Partner logo"
+            width={150}
+            height={50}
+            className="h-10 w-auto object-contain"
           />
         </div>
       </div>

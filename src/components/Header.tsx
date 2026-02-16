@@ -1,7 +1,10 @@
-import { useState, useEffect, useCallback, memo } from 'react';
-import { SITE_CONFIG, NAV_ITEMS } from '../config/content';
+'use client';
 
-export const Header = memo(function Header() {
+import { useState, useEffect, useCallback } from 'react';
+import Image from 'next/image';
+import { SITE_CONFIG } from '../config/content';
+
+export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -29,7 +32,13 @@ export const Header = memo(function Header() {
         <div className="flex justify-between items-center h-16 w-full">
           {/* Logo */}
           <a href="#" className="flex-shrink-0 flex items-center gap-6" aria-label="ZYNCO Home">
-            <img src="/images/zynco-logo.png" alt="ZYNCO Logo" width="50" height="50" className="object-contain" />
+            <Image
+              src="/images/zynco-logo.png"
+              alt="ZYNCO Logo"
+              width={50}
+              height={50}
+              className="object-contain"
+            />
             <div className="flex flex-col gap-0.5">
               <div className="text-lg font-bold text-gray-900 leading-tight tracking-wide">{SITE_CONFIG.name}</div>
               <div className="text-xs text-gray-600 hidden sm:block tracking-wide">{SITE_CONFIG.tagline}</div>
@@ -45,16 +54,16 @@ export const Header = memo(function Header() {
               About Us
             </button>
             <button 
-              onClick={() => scrollToSection('why-zynco')}
-              className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
-            >
-              Why ZYNCO
-            </button>
-            <button 
               onClick={() => scrollToSection('services')}
               className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
             >
               Services
+            </button>
+            <button 
+              onClick={() => scrollToSection('why-zynco')}
+              className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+            >
+              Why ZYNCO
             </button>
             <button 
               onClick={() => scrollToSection('contact')}
@@ -101,16 +110,16 @@ export const Header = memo(function Header() {
                 About Us
               </button>
               <button 
-                onClick={() => scrollToSection('why-zynco')}
-                className="text-left text-gray-700 hover:text-blue-600 font-medium transition-colors"
-              >
-                Why ZYNCO
-              </button>
-              <button 
                 onClick={() => scrollToSection('services')}
                 className="text-left text-gray-700 hover:text-blue-600 font-medium transition-colors"
               >
                 Services
+              </button>
+              <button 
+                onClick={() => scrollToSection('why-zynco')}
+                className="text-left text-gray-700 hover:text-blue-600 font-medium transition-colors"
+              >
+                Why ZYNCO
               </button>
               <button 
                 onClick={() => scrollToSection('contact')}
@@ -131,4 +140,4 @@ export const Header = memo(function Header() {
 
     </header>
   );
-});
+}

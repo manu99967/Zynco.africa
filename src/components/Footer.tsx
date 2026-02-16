@@ -1,16 +1,30 @@
+import Image from 'next/image';
+
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
     <footer className="bg-gray-900 text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-4 gap-8 mb-8">
+        <div className="grid md:grid-cols-4 gap-8">
           {/* Company Info */}
-          <div className="md:col-span-2">
-            <h3 className="text-2xl font-bold mb-4">ZYNCO</h3>
-            <p className="text-gray-400 leading-relaxed mb-4">
-              Business solutions and technology that help organizations perform better, 
-              operate smarter, and deliver measurable impact.
+          <div className="col-span-2">
+            <div className="flex items-center gap-3 mb-4">
+              <Image
+                src="/images/zynco-logo.png"
+                alt="ZYNCO Logo"
+                width={40}
+                height={40}
+                className="object-contain"
+              />
+              <span className="text-xl font-bold">ZYNCO</span>
+            </div>
+            <p className="text-gray-400 mb-4 max-w-md">
+              Technology and business solutions for enterprises, institutions, and growing businesses in East Africa.
+            </p>
+            <p className="text-gray-400 text-sm">
+              GTC, Westlands – Nairobi, Kenya<br />
+              P.O. Box 17894-00100, Nairobi
             </p>
           </div>
 
@@ -18,26 +32,9 @@ export function Footer() {
           <div>
             <h4 className="font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              <li>
-                <a href="#about" className="text-gray-400 hover:text-white transition-colors">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="#services" className="text-gray-400 hover:text-white transition-colors">
-                  Services
-                </a>
-              </li>
-              <li>
-                <a href="#why-zynco" className="text-gray-400 hover:text-white transition-colors">
-                  Why ZYNCO
-                </a>
-              </li>
-              <li>
-                <a href="#contact" className="text-gray-400 hover:text-white transition-colors">
-                  Contact
-                </a>
-              </li>
+              <li><a href="#about" className="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+              <li><a href="#services" className="text-gray-400 hover:text-white transition-colors">Services</a></li>
+              <li><a href="#contact" className="text-gray-400 hover:text-white transition-colors">Contact</a></li>
             </ul>
           </div>
 
@@ -45,28 +42,15 @@ export function Footer() {
           <div>
             <h4 className="font-semibold mb-4">Services</h4>
             <ul className="space-y-2">
-              <li className="text-gray-400">Messaging Solutions</li>
-              <li className="text-gray-400">Authentication Systems</li>
-              <li className="text-gray-400">Business Advisory</li>
-              <li className="text-gray-400">Market Support</li>
+              <li><a href="#services" className="text-gray-400 hover:text-white transition-colors">Messaging Solutions</a></li>
+              <li><a href="#services" className="text-gray-400 hover:text-white transition-colors">Authentication</a></li>
+              <li><a href="#services" className="text-gray-400 hover:text-white transition-colors">Business Advisory</a></li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-gray-800 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm mb-4 md:mb-0">
-              © {currentYear} ZYNCO. All rights reserved.
-            </p>
-            <div className="flex space-x-6 text-sm">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                Privacy Policy
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                Terms of Service
-              </a>
-            </div>
-          </div>
+        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm">
+          <p>&copy; {currentYear} ZYNCO Systems Ltd. All rights reserved.</p>
         </div>
       </div>
     </footer>
