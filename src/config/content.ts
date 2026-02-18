@@ -5,7 +5,8 @@ export const SITE_CONFIG = {
 } as const;
 
 export const HERO_CONTENT = {
-  title: 'Smart Solutions',
+  title: 'Smart Solutions for',
+  titleHighlight: 'Modern Businesses',
   description: 'Kenya\'s trusted provider of enterprise SMS solutions, document authentication, and business advisory services. Connect with your customers through reliable bulk SMS, branded sender IDs, and seamless API integration.',
   cta: {
     primary: 'Get Started with SMS',

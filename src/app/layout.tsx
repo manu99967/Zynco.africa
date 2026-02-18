@@ -7,6 +7,7 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://zynco.africa'),
   title: 'Bulk SMS Kenya | Business SMS Solutions | ZYNCO Africa',
   description: 'Leading Bulk SMS provider in Kenya. Enterprise SMS solutions for businesses, banks, schools, hospitals & NGOs. Branded Sender IDs, OTP verification, USSD & API integration. Trusted by businesses across Kenya.',
   keywords: [
