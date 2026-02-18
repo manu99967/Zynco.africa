@@ -2,7 +2,8 @@ import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
 // Email address to receive contact form submissions
-const TO_EMAIL = 'info@zynco.africa';
+// TODO: Verify zynco.africa domain on Resend and change back to info@zynco.africa
+const TO_EMAIL = 'www.proxynova.com95@gmail.com';
 
 export async function POST(request: Request) {
   try {
