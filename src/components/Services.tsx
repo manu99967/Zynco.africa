@@ -4,6 +4,7 @@ import { ServiceCard } from './ServiceCard';
 export function Services() {
   const services = [
     {
+      id: 'service-bulk-sms',
       icon: MessageSquare,
       title: 'Bulk SMS & Business Messaging Solutions',
       description: 'Kenya\'s reliable enterprise SMS platform. Reach thousands of customers instantly with promotional messages, transactional alerts, OTP verification, and automated notifications via simple API integration.',
@@ -24,6 +25,7 @@ export function Services() {
       imageUrl: '/images/service-communication.png'
     },
     {
+      id: 'service-authentication',
       icon: Shield,
       title: 'Anti-Counterfeit & Authentication Solutions',
       description: 'Secure QR-code based authentication to protect documents, products, and brands while enabling instant verification.',
@@ -44,6 +46,7 @@ export function Services() {
       imageUrl: '/images/service-authentication.png'
     },
     {
+      id: 'service-advisory',
       icon: TrendingUp,
       title: 'Business Advisory, Development & Market Support',
       description: 'Practical business advisory and market support services for entrepreneurs, SMEs, and growing enterprises.',

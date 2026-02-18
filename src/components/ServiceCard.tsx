@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { LucideIcon } from 'lucide-react';
 
 interface ServiceCardProps {
+  id: string;
   icon: LucideIcon;
   title: string;
   description: string;
@@ -13,6 +14,7 @@ interface ServiceCardProps {
 }
 
 export function ServiceCard({ 
+  id,
   icon: Icon, 
   title, 
   description, 
@@ -23,7 +25,7 @@ export function ServiceCard({
   reverse = false 
 }: ServiceCardProps) {
   return (
-    <div className={`grid md:grid-cols-2 gap-8 lg:gap-12 items-center ${reverse ? 'md:flex-row-reverse' : ''}`}>
+    <div id={id} className={`grid md:grid-cols-2 gap-8 lg:gap-12 items-center ${reverse ? 'md:flex-row-reverse' : ''}`}>
       {/* Image */}
       <div className={`relative ${reverse ? 'md:order-2' : ''}`}>
         <div className="rounded-2xl overflow-hidden shadow-xl">

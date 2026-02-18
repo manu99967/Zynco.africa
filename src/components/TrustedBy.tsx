@@ -22,6 +22,13 @@ export function TrustedBy() {
             height={50}
             className="h-10 w-auto object-contain"
           />
+          <Image
+            src="/images/partner3.png"
+            alt="Partner logo"
+            width={150}
+            height={50}
+            className="h-10 w-auto object-contain"
+          />
         </div>
       </div>
     </section>

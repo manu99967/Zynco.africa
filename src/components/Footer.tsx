@@ -52,7 +52,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-silver-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-silver-500 text-sm">
-            © {currentYear} ZYNCO Systems Ltd. All rights reserved.
+            © {currentYear} ZYNCO Africa. All rights reserved.
           </p>
           <div className="flex gap-6 mt-4 md:mt-0">
             <a href="mailto:info@zynco.africa" className="text-silver-400 hover:text-gold-400 transition-colors text-sm">
