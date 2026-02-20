@@ -19,7 +19,7 @@ export async function POST(request: Request) {
     const resend = new Resend(process.env.RESEND_API_KEY);
 
     const body = await request.json();
-    const { name, email, organization, service, message } = body;
+    const { name, email, phone, organization, service, message } = body;
 
     // Validate required fields
     if (!name || !email || !message) {
@@ -60,14 +60,18 @@ export async function POST(request: Request) {
                 <div class="label">Name:</div>
                 <div class="value">${name}</div>
               </div>
-              <div class="field">
-                <div class="label">Email:</div>
-                <div class="value"><a href="mailto:${email}">${email}</a></div>
-              </div>
-              <div class="field">
-                <div class="label">Organization:</div>
-                <div class="value">${organization || 'Not provided'}</div>
-              </div>
+               <div class="field">
+                 <div class="label">Email:</div>
+                 <div class="value"><a href="mailto:${email}">${email}</a></div>
+               </div>
+               <div class="field">
+                 <div class="label">Phone:</div>
+                 <div class="value">${phone || 'Not provided'}</div>
+               </div>
+               <div class="field">
+                 <div class="label">Organization:</div>
+                 <div class="value">${organization || 'Not provided'}</div>
+               </div>
               <div class="field">
                 <div class="label">Service of Interest:</div>
                 <div class="value">${getServiceLabel(service)}</div>

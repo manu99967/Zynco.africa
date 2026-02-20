@@ -66,6 +66,12 @@ export function Header() {
               Why ZYNCO
             </button>
             <button 
+              onClick={() => scrollToSection('faq')}
+              className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+            >
+              FAQs
+            </button>
+            <button 
               onClick={() => scrollToSection('contact')}
               className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
             >
@@ -99,7 +105,7 @@ export function Header() {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
+         {/* Mobile Navigation */}
         {mobileMenuOpen && (
           <div className="md:hidden py-4 border-t border-gray-100">
             <nav className="flex flex-col gap-4">
@@ -120,6 +126,12 @@ export function Header() {
                 className="text-left text-gray-700 hover:text-blue-600 font-medium transition-colors"
               >
                 Why ZYNCO
+              </button>
+              <button 
+                onClick={() => scrollToSection('faq')}
+                className="text-left text-gray-700 hover:text-blue-600 font-medium transition-colors"
+              >
+                FAQs
               </button>
               <button 
                 onClick={() => scrollToSection('contact')}
